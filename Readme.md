@@ -32,6 +32,11 @@ Please read the specificaion here -> https://tools.ietf.org/html/rfc6902
 
     There are various implementations of both JSON Pointer or JSON Path in different languages -> here you can find a list http://jsonpatch.com/
 
+ * Process JSON objects/arrays using the JAVA 8 streams operations.
+ * Processing of Big JSON Data
+
+    If you read a very big json object you will have some memory issues. To addres this problem the JSON-P 1.1 introduces the class JsonParser. This class uses the streaming model to read an JSON object and works at token level.
+
 ##### Exploring the API
 
 There are 3 main classes in JSON-P 1.1 :  **Json**, **JsonArray**, **JsonObject**, **JsonPointer**
@@ -133,3 +138,5 @@ jsonArrayOfObjects.getValuesAs(JsonObject.class).stream()
 
 
 ###### Problem 1
+
+
