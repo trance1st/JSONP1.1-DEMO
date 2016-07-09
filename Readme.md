@@ -40,6 +40,7 @@ Please read the specificaion here -> https://tools.ietf.org/html/rfc6902
 ##### Exploring the API
 
 There are 3 main classes in JSON-P 1.1 :  **Json**, **JsonArray**, **JsonObject**, **JsonPointer**
+
 1. JSON
 ```
   /** Factory class for creating JSON processing objects.
@@ -59,7 +60,7 @@ There are 3 main classes in JSON-P 1.1 :  **Json**, **JsonArray**, **JsonObject*
   public interface JsonObject {
   }
 ```
-3. JsonObject
+3. JsonArray
 ```
 /**
  * {@code JsonArray} represents an immutable JSON array
