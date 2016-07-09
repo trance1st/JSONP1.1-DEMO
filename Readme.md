@@ -27,7 +27,7 @@ Create a project and add the following dependencies
  * JSON Pointer implementation. In you are not familliar what Json Pointer is, please read the IETF specification here -> https://tools.ietf.org/html/rfc6901
  * JSON Patch implementation(https://tools.ietf.org/html/rfc6902)
 
-    JSON Patch provides same operations that can be applied to an JSON object in order to modify it. It uses the JSON Pointer to specify o location from the target object which will be modified.
+    JSON Patch provides some operations that can be applied to an JSON object in order to modify it. It uses the JSON Pointer to specify o location from the target object which will be modified.
 Please read the specificaion here -> https://tools.ietf.org/html/rfc6902
 
     There are various implementations of both JSON Pointer or JSON Path in different languages -> here you can find a list http://jsonpatch.com/
@@ -86,7 +86,7 @@ There are 3 main classes in JSON-P 1.1 :  **Json**, **JsonArray**, **JsonObject*
 
 ###### Using the builder classes from JSON-P 1.1
 
-Use the JSON-p to create same JSON objects.
+Use JSON-P to create some JSON objects.
 
 Use the followings methods:
 * Json.createObjectBuilder
