@@ -71,16 +71,8 @@ There are 3 main classes in JSON-P 1.1 :  **Json**, **JsonArray**, **JsonObject*
   }
 ```
 
-3. JsonObject
-```
-/**
- * {@code JsonArray} represents an immutable JSON array
- * (an ordered sequence of zero or more values).
- * It also provides an unmodifiable list view of the values in the array.
- *
-  public interface JsonArray {
-  }
-```
+4. JsonPointer
+
 ```
 /**
  * <p>This class is an immutable representation of a JSON Pointer as specified in
