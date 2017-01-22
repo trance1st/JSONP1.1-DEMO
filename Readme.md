@@ -272,7 +272,8 @@ In all the above examples, when you load and JsonObject or JsonArray, the whole 
 
 To solve the memory problem, the JsonParser class uses the streaming model to parse a JSON.
 
->  See the class BigJsonProcessing 
+>  See the class BigJsonProcessing
+
 >  Donwload the file https://drive.google.com/open?id=0B2JsVi_687XKbE91cWE2SDVwMm8 to the root of this project. Name the file 'companies.json'
 
 In our example first we will try to read a big json file ( ~ 80MB).
