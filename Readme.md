@@ -202,6 +202,14 @@ JsonStructure newBeer = patchBuilder.replace("/brewery/key", “GBrewery")
                                     .apply(beer)
 ```
 
+**Impact on building REST API's
+
+```
+PATCH /my/data HTTP/1.1
+Host: example.org
+Content-Length: 326
+Content-Type: application/json-patch+json
+```
 >  See the class JsonPatchExample for more examples
 
 >  Solve the exercise described in JsonPatchExercise.txt (use the class JsonPatchExercise for solution)
@@ -233,6 +241,13 @@ you will obtain
 {
 "firstName":"Ion"
 }
+```
+**Impact on building REST API's
+
+```
+PATCH /target HTTP/1.1
+Host: example.org
+Content-Type: application/merge-patch+json
 ```
 
 >  See the class JsonMergePatchExample for more examples
