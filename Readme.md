@@ -266,9 +266,34 @@ jsonArrayOfObjects.getValuesAs(JsonObject.class).stream()
 
 >  Solve the exercise described in JsonStreamsExercise.txt (use the class JsonStreamsExerciseSolution for solution)
 
-##### Problems/Exercies
+##### 6 - Process big JSON files
+
+In all the above examples, when you load and JsonObject or JsonArray, the whole document is loaded into memory. 
+To solve the memory problem, the JsonParser class uses the streaming model to parse a JSON.
+
+>  See the class BigJsonProcessing 
+
+In our example first we will try to read a big json file ( ~ 80MB).
+As expected, we are getting an exception
+```
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.util.LinkedHashMap.newNode(LinkedHashMap.java:256)
+```
+
+Then we will try to solve this problem using the JsonParser class
+>  See the method BigJsonProcessing#parseWithStreams()
 
 
-###### Problem 1
+JSON-P 1.1 offers also a method to write JSON documents using the streaming model. See JsonGenerator class.
+
+```
+JsonGenerator#writeStartArray
+JsonGenerator#write(String,String)
+JsonGenerator#writeEnd
+```
+
+>  See the method BigJsonProcessing#parseAndSave()
+
+
 
 
