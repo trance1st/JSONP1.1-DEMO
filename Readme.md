@@ -289,9 +289,9 @@ Then we will try to solve this problem using the JsonParser class
 JSON-P 1.1 offers also a method to write JSON documents using the streaming model. See JsonGenerator class.
 
 ```
-JsonGenerator#writeStartArray
+JsonGenerator#writeStartArray()
 JsonGenerator#write(JsonValue)
-JsonGenerator#writeEnd
+JsonGenerator#writeEnd()
 ```
 
 >  See the method BigJsonProcessing#parseAndSave()
