@@ -302,8 +302,9 @@ JsonGenerator#writeEnd()
 
 
 
-<center>THANKS YOU</center>
-						
+<center>THANK YOU</center>
+	
+
 
 **USEFULL LINKS:**
 
