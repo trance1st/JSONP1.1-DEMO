@@ -290,7 +290,7 @@ JSON-P 1.1 offers also a method to write JSON documents using the streaming mode
 
 ```
 JsonGenerator#writeStartArray
-JsonGenerator#write(String,String)
+JsonGenerator#write(JsonValue)
 JsonGenerator#writeEnd
 ```
 
