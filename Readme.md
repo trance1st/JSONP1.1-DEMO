@@ -84,7 +84,7 @@ There are 3 main classes in JSON-P 1.1 :  **Json**, **JsonArray**, **JsonObject*
   }
 ```
 
-###### Using the builder classes from JSON-P 1.1
+##### Using the builder classes from JSON-P 1.1
 
 Use JSON-P to create some JSON objects.
 
@@ -102,7 +102,23 @@ System.out.println(book);
 ```
 See the class JsonBuildersExample for more examples.
 
-###### Using the JSONPointer class
+##### JSON POINTER
+JSON Pointer defines a string syntax for identifying a specific value within a JSON document.
+
+Exampple:
+```
+{
+    "foo" : ["bar", "baz"],
+    "pi" : 3.1416
+}
+```
+The following JSON Pointers resolve this JSON as:
+
+* "/foo" → [ "bar", "baz" ]
+* "/foo/0" → "bar"
+* "/foo/1" → "baz"
+* "/pi" → 3.1416
+
 Retrieving a value based on a JSON Pointer
 ```
 JsonObject person = Json.createObjectBuilder()
@@ -118,7 +134,36 @@ System.out.println(name);
 
 See the class JsonPointerExample for more examples.
 
-###### Process JSON objects (actually JSON arrays) like JAVA 8 streams
+
+##### JSON PATCH
+JSON Patch is a JSON document that contains a sequence of modifications, which they are executed all of them or none of them.
+The sequence of modifications that JSON Patch support are test, remove, add, replace, move and copy.
+```
+Given:
+{
+  "title":"Guinness",
+    "brewery": {
+      "key": "guinness"
+    }
+}
+```
+if you apply the patch
+```
+[
+  {"op":"replace", "path":"/brewery/key", “value”:"GBrewery"},
+  {"op":"remove", "path": "/title"}
+]
+```
+the resulting document will be
+```
+{
+  "brewery": {
+    "key": "GBrewery"
+  }
+}
+```
+
+##### Process JSON objects (actually JSON arrays) like JAVA 8 streams
  You can process JSON arrays in the same way you process JAVA 8 streams:
 
 ```
