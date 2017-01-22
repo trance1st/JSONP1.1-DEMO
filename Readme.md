@@ -86,7 +86,7 @@ There are 3 main classes in JSON-P 1.1 :  **Json**, **JsonArray**, **JsonObject*
 
 #### LAB 
 
-In the source code you will find a separate package for each of the below exercise. 
+In the source code you will find a separate package for each of the below exercises. 
 
 Each pacakge contains 
 * an example class who's name is ending with "Example"
