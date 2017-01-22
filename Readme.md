@@ -92,7 +92,7 @@ Each pacakge contains
 * an example class who's name is ending with "Example"
 * a txt file describing what needs to be solved
 * a class (ending with 'Exercise') where you need to solve the exercise.
-* solution in the class ending with 'Solution' - please see the solution only after you try yourself to solve the exercise.
+* the solution in a class ending with 'Solution' - please see the solution only after you try yourself to solve the exercise.
 
 This lab contains 6 parts
 
@@ -178,11 +178,6 @@ the resulting document will be
   }
 }
 ```
-
->  See the class JsonPatchExample for more examples
-
->  Solve the exercise described in JsonPatchExercise.txt (use the class JsonPatchExercise for solution)
-
 In JSON-P 1.1 you can apply a PATCH to a JSON document using two methods
 * creating the JsonObject from scratch
 ```
@@ -206,6 +201,11 @@ JsonStructure newBeer = patchBuilder.replace("/brewery/key", “GBrewery")
                              .remove("/title")
                                     .apply(beer)
 ```
+
+>  See the class JsonPatchExample for more examples
+
+>  Solve the exercise described in JsonPatchExercise.txt (use the class JsonPatchExercise for solution)
+
 
 ##### 4 - JSON MERGE PATCH
 
