@@ -303,6 +303,7 @@ JsonGenerator#writeEnd()
 
 https://www.jcp.org/en/jsr/detail?id=374
 https://jsonp.java.net/
+https://github.com/json-p/api-ri
 https://www.voxxed.com/blog/2015/12/10441/?utm_medium=referral&utm_campaign=ZEEF&utm_source=https%3A%2F%2Fjavaee8.zeef.com%2Farjan.tijms
 http://blog.rahmannet.net/2017/01/json-p-11-public-review-starts-now.html
 
