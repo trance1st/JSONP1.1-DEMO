@@ -152,7 +152,7 @@ System.out.println(name);
 
 ##### 3 - JSON PATCH
 JSON Patch is a JSON document that contains a sequence of modifications, which they are executed all of them or none of them.
-The sequence of modifications that JSON Patch support are test, remove, add, replace, move and copy.
+The sequence of modifications that JSON Patch support are **test**, **remove**, **add**, **replace**, **move** and **copy**.
 
 Given:
 ```
@@ -211,6 +211,8 @@ JsonStructure newBeer = patchBuilder.replace("/brewery/key", “GBrewery")
 
 For updating a JSON document there is another specification called JSON Merge Patch (RFC 7386). 
 It standardises the update operation, but instead of sending a new JSON document with the operations to apply, you send a document which its syntax mimics the document being modified. You only send the fields with the updates. The special value null is used to indicate that a field should be removed.
+
+Limitation: it is not possible to patch part of a target that is not an object, such as to replace just some of the values in an array.
 
 ##### 5 - Process JSON objects (actually JSON arrays) like JAVA 8 streams
  You can process JSON arrays in the same way you process JAVA 8 streams:
