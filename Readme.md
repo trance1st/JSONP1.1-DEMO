@@ -132,14 +132,15 @@ JsonValue name = p.getValue(person);
 System.out.println(name);
 ```
 
-See the class JsonPointerExample for more examples.
-
+>  See the class JsonPointerExample for more examples.
+>  Solve the exercise described in JsonPointerExercise.txt (use the class JsonPointerExercise for solution)
 
 ##### JSON PATCH
 JSON Patch is a JSON document that contains a sequence of modifications, which they are executed all of them or none of them.
 The sequence of modifications that JSON Patch support are test, remove, add, replace, move and copy.
-```
+
 Given:
+```
 {
   "title":"Guinness",
     "brewery": {
@@ -162,6 +163,35 @@ the resulting document will be
   }
 }
 ```
+
+>  See the class JsonPatchExample for more examples
+
+>  Solve the exercise described in JsonPatchExercise.txt (use the class JsonPatchExercise for solution)
+
+In JSON-P 1.1 you can apply a PATCH to a JSON document using two methods
+* creating the JsonObject from scratch
+```
+// JSON Array with JSON Objects containing JSON Patch fields
+JsonArray patchExpression = Json.createArrayBuilder().add(Json.createObjectBuilder().add(…))
+                   .add(…);
+JsonPatch jsonPatch = new JsonPatch(patchExpression);
+ 
+JsonStructure beer;
+ 
+// Finally the patch is applied to a JSON document
+JsonStructure newBeer = jsonPatch.apply(beer);
+```
+* using the class JsonPatchBuilder 
+```
+JsonObject beer;
+JsonPatchBuilder patchBuilder = new JsonPatchBuilder();
+ 
+// Construct and apply the JSON Patch
+JsonStructure newBeer = patchBuilder.replace("/brewery/key", “GBrewery")
+                             .remove("/title")
+                                    .apply(beer)
+```
+
 
 ##### Process JSON objects (actually JSON arrays) like JAVA 8 streams
  You can process JSON arrays in the same way you process JAVA 8 streams:
