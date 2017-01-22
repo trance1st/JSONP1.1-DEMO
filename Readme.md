@@ -84,7 +84,19 @@ There are 3 main classes in JSON-P 1.1 :  **Json**, **JsonArray**, **JsonObject*
   }
 ```
 
-##### Using the builder classes from JSON-P 1.1
+#### LAB 
+
+In the source code you will find a separate package for each of the below exercise. 
+
+Each pacakge contains 
+* an example class who's name is ending with "Example"
+* a txt file describing what needs to be solved
+* a class (ending with 'Exercise') where you need to solve the exercise.
+* solution in the class ending with 'Solution' - please see the solution only after you try yourself to solve the exercise.
+
+This lab contains 6 parts
+
+##### 1 - Using the builder classes from JSON-P 1.1
 
 Use JSON-P to create some JSON objects.
 
@@ -104,7 +116,7 @@ System.out.println(book);
 
 >  Solve the exercise described in JsonBuildersExercise.txt (use the class JsonBuildersExercise for solution)
 
-##### JSON POINTER
+##### 2 - JSON POINTER
 JSON Pointer defines a string syntax for identifying a specific value within a JSON document.
 
 Exampple:
@@ -138,7 +150,7 @@ System.out.println(name);
 
 >  Solve the exercise described in JsonPointerExercise.txt (use the class JsonPointerExercise for solution)
 
-##### JSON PATCH
+##### 3 - JSON PATCH
 JSON Patch is a JSON document that contains a sequence of modifications, which they are executed all of them or none of them.
 The sequence of modifications that JSON Patch support are test, remove, add, replace, move and copy.
 
@@ -195,12 +207,12 @@ JsonStructure newBeer = patchBuilder.replace("/brewery/key", “GBrewery")
                                     .apply(beer)
 ```
 
-##### JSON MERGE PATCH
+##### 4 - JSON MERGE PATCH
 
 For updating a JSON document there is another specification called JSON Merge Patch (RFC 7386). 
 It standardises the update operation, but instead of sending a new JSON document with the operations to apply, you send a document which its syntax mimics the document being modified. You only send the fields with the updates. The special value null is used to indicate that a field should be removed.
 
-##### Process JSON objects (actually JSON arrays) like JAVA 8 streams
+##### 5 - Process JSON objects (actually JSON arrays) like JAVA 8 streams
  You can process JSON arrays in the same way you process JAVA 8 streams:
 
 ```
