@@ -214,6 +214,31 @@ It standardises the update operation, but instead of sending a new JSON document
 
 Limitation: it is not possible to patch part of a target that is not an object, such as to replace just some of the values in an array.
 
+Given the document
+```
+{
+"firstName":"Posa",
+"lastName":"Bogdan"
+}
+```
+if you apply the merge patch
+```
+{
+"firstName":"Ion",
+"lastName":null
+}
+```
+you will obtain
+```
+{
+"firstName":"Ion"
+}
+```
+
+>  See the class JsonMergePatchExample for more examples
+
+>  Solve the exercise described in JsonMergePatch.txt (use the class JsonMergePatchExercise for solution)
+
 ##### 5 - Process JSON objects (actually JSON arrays) like JAVA 8 streams
  You can process JSON arrays in the same way you process JAVA 8 streams:
 
