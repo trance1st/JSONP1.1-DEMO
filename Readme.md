@@ -262,6 +262,9 @@ Content-Type: application/merge-patch+json
 jsonArrayOfObjects.getValuesAs(JsonObject.class).stream()
 ```
 
+>  See the class JsonStreamsExample for more examples.
+
+>  Solve the exercise described in JsonStreamsExercise.txt (use the class JsonStreamsExerciseSolution for solution)
 
 ##### Problems/Exercies
 
