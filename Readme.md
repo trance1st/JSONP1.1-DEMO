@@ -100,7 +100,9 @@ JsonObject book = Json.createObjectBuilder()
                 .build();
 System.out.println(book);
 ```
-See the class JsonBuildersExample for more examples.
+>  See the class JsonBuildersExample for more examples.
+
+>  Solve the exercise described in JsonBuildersExercise.txt (use the class JsonBuildersExercise for solution)
 
 ##### JSON POINTER
 JSON Pointer defines a string syntax for identifying a specific value within a JSON document.
@@ -133,6 +135,7 @@ System.out.println(name);
 ```
 
 >  See the class JsonPointerExample for more examples.
+
 >  Solve the exercise described in JsonPointerExercise.txt (use the class JsonPointerExercise for solution)
 
 ##### JSON PATCH
@@ -192,6 +195,10 @@ JsonStructure newBeer = patchBuilder.replace("/brewery/key", “GBrewery")
                                     .apply(beer)
 ```
 
+##### JSON MERGE PATCH
+
+For updating a JSON document there is another specification called JSON Merge Patch (RFC 7386). 
+It standardises the update operation, but instead of sending a new JSON document with the operations to apply, you send a document which its syntax mimics the document being modified. You only send the fields with the updates. The special value null is used to indicate that a field should be removed.
 
 ##### Process JSON objects (actually JSON arrays) like JAVA 8 streams
  You can process JSON arrays in the same way you process JAVA 8 streams:
