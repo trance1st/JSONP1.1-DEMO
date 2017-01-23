@@ -2,7 +2,7 @@
 
 ##### Build the reference implementation on JSON-P 1.1
 At the time of writing this demo, the JSON-Processing API RI has not been released in the maven central repo. So you have to build the RI by yourself.
-- checkout this repo: https://github.com/json-processing-inofficial/jsonp
+- checkout this repo: https://github.com/json-p/api-ri
 - simply run mvn clean install
 
 ##### Use the RI JSON-P 1.1
@@ -139,7 +139,7 @@ JsonObject person = Json.createObjectBuilder()
                 .add("name", "Posa bogdan")
                 .build();
 //Applying a pointer
-JsonPointer p = new JsonPointer("/name");
+JsonPointer p = Json.createPointer("/name");
 JsonValue name = p.getValue(person);
 
 // It will print "Posa bogdan"
@@ -184,7 +184,7 @@ In JSON-P 1.1 you can apply a PATCH to a JSON document using two methods
 // JSON Array with JSON Objects containing JSON Patch fields
 JsonArray patchExpression = Json.createArrayBuilder().add(Json.createObjectBuilder().add(…))
                    .add(…);
-JsonPatch jsonPatch = new JsonPatch(patchExpression);
+JsonPatch jsonPatch = Json.createPatch(patchExpression);
  
 JsonStructure beer;
  
@@ -194,7 +194,7 @@ JsonStructure newBeer = jsonPatch.apply(beer);
 * using the class JsonPatchBuilder 
 ```
 JsonObject beer;
-JsonPatchBuilder patchBuilder = new JsonPatchBuilder();
+JsonPatchBuilder patchBuilder = Json.createPatchBuilder();
  
 // Construct and apply the JSON Patch
 JsonStructure newBeer = patchBuilder.replace("/brewery/key", “GBrewery")
