@@ -1,0 +1,53 @@
+
+
+1. Implement the createJSON method in JsonBuildersExercise class and construct the JSON
+
+{
+    "id":"0001",
+    "type":"donut",
+    "name":"Cake",
+    "batter":[
+        {
+            "id":"1001",
+            "type":"Regular"
+        },
+        {
+            "id":"1002",
+            "type":"Chocolate"
+        }
+    ]
+}
+
+
+2. Implement the extendJSON method in JsonBuildersExercise class and append an array to the above JSON
+
+{
+    "id":"0001",
+    "type":"donut",
+    "name":"Cake",
+    "batter":[
+        {
+            "id":"1001",
+            "type":"Regular"
+        },
+        {
+            "id":"1002",
+            "type":"Chocolate"
+        }
+    ],
+    "topping":[
+        {
+            "id":"5001",
+            "type":"None"
+        },
+        {
+            "id":"5002",
+            "type":"Sugar"
+        },
+        {
+            "id":"5003",
+            "type":"Maple"
+        }
+    ]
+}
+

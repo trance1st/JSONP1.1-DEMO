@@ -1,0 +1,30 @@
+
+Use the already built JSON object
+For all the below exercises use the JsonPointer class
+ -> javax.json.JsonPointer#add
+ -> javax.json.JsonPointer#replace
+ etc
+
+1. Read the value of the 'name' attribute
+
+2. Read the value of the 'type' attribute of the second batter
+
+3. Add a new attribute to the JSON
+    	"price": 0.55
+
+4. Change the value of the 'price' attribute to 1.55
+
+5. Change the value of the 'type' attribute of the Chocolate batter to Vanilla
+You should obtain
+    "batter":
+		[
+			{ "id": "1001", "type": "Regular" },
+			{ "id": "1002", "type": "Vanilla" }
+		]
+
+6. Add a new topping in the array
+
+        { "id": "5004", "type": "Vanilla" }
+
+ HINT : to reference the last element use the json pointer "/topping/-"
+ The '-' sign is indicating the last element of an array

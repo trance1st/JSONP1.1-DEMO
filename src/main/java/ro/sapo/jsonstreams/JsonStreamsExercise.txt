@@ -1,0 +1,28 @@
+
+Use the json built in JsonBuildersExercise class
+
+Parse this JSON and get all the toppings who's 'type' attribute have 5 letters.
+
+ You should obtain this:
+ [{"id":"5002","type":"Sugar"},{"id":"5003","type":"Maple"}]
+
+
+ The initial array is
+
+ "topping":[
+         {
+             "id":"5001",
+             "type":"None"
+         },
+         {
+             "id":"5002",
+             "type":"Sugar"
+         },
+         {
+             "id":"5003",
+             "type":"Maple"
+         }
+     ]
+ but only Sugar and Maple have 5 letters.
+
+

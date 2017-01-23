@@ -11,9 +11,12 @@ public class JsonPointerExample {
         JsonObject book = Json.createObjectBuilder()
                 .add("title", "Snow White")
                 .add("author", Json.createObjectBuilder()
-                        .add("name", "Posa").build())
+                        .add("name", "Posa")
+                        .add("address", "Bucharest, Romania")
+                        .build())
                 .add("year", 1812)
                 .build();
+        System.out.println(book);
 
         //Applying a pointer
         JsonPointer p = new JsonPointer("/author/name");
@@ -40,6 +43,10 @@ public class JsonPointerExample {
 
         JsonPointer arrayPointer = new JsonPointer("/similarBooks/0/title");
         System.out.println(arrayPointer.replace(bookExtendedWithArray, Json.createValue("new title")));
+
+
+        JsonPointer arrayPointerAdd = new JsonPointer("/similarBooks/0");
+        System.out.println(arrayPointerAdd.add(bookExtendedWithArray, Json.createObjectBuilder().add("asd", "new").build()));
 
     }
 }

@@ -1,0 +1,4 @@
+
+Use JsonPatchBuilder to implement the operations 3-6 from the previous exercise
+
+Get the json patch document that applies the operations 3-6

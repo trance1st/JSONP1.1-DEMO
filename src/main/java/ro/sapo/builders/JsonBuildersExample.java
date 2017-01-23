@@ -24,7 +24,6 @@ public class JsonBuildersExample {
 
         System.out.println(bookExtended);
 
-
         JsonArray jsonArrayOfStrings = Json.createArrayBuilder()
                 .add("Posa").add("Popescu")
                 .build();
