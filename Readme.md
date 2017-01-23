@@ -41,35 +41,7 @@ Please read the specificaion here -> https://tools.ietf.org/html/rfc6902
 
 There are 3 main classes in JSON-P 1.1 :  **Json**, **JsonArray**, **JsonObject**, **JsonPointer**
 
-1. JSON
-```
-  /** Factory class for creating JSON processing objects.
-  * This class provides the most commonly used methods for creating these
-  * objects and their corresponding factories. The factory classes provide
-  * all the various ways to create these objects.
-  public final class Json {
-  }
-```
-2. JsonObject
-```
- /**
- * {@code JsonObject} class represents an immutable JSON object value
- * (an unordered collection of zero or more name/value pairs).
- * It also provides unmodifiable map view to the JSON object
- * name/value mappings.
-  public interface JsonObject {
-  }
-```
-3. JsonArray
-```
-/**
- * {@code JsonArray} represents an immutable JSON array
- * (an ordered sequence of zero or more values).
- * It also provides an unmodifiable list view of the values in the array.
- *
-  public interface JsonArray {
-  }
-```
+
 
 4. JsonPointer
 
@@ -117,6 +89,9 @@ System.out.println(book);
 >  Solve the exercise described in JsonBuildersExercise.txt (use the class JsonBuildersExercise for solution)
 
 ##### 2 - JSON POINTER
+
+https://tools.ietf.org/html/rfc6901
+
 JSON Pointer defines a string syntax for identifying a specific value within a JSON document.
 
 Exampple:
@@ -151,6 +126,9 @@ System.out.println(name);
 >  Solve the exercise described in JsonPointerExercise.txt (use the class JsonPointerExercise for solution)
 
 ##### 3 - JSON PATCH
+
+https://tools.ietf.org/html/rfc6902
+ 
 JSON Patch is a JSON document that contains a sequence of modifications, which they are executed all of them or none of them.
 The sequence of modifications that JSON Patch support are **test**, **remove**, **add**, **replace**, **move** and **copy**.
 
@@ -216,6 +194,9 @@ Content-Type: application/json-patch+json
 
 
 ##### 4 - JSON MERGE PATCH
+
+https://tools.ietf.org/html/rfc7386
+
 
 For updating a JSON document there is another specification called JSON Merge Patch (RFC 7386). 
 It standardises the update operation, but instead of sending a new JSON document with the operations to apply, you send a document which its syntax mimics the document being modified. You only send the fields with the updates. The special value null is used to indicate that a field should be removed.
