@@ -16,9 +16,9 @@ public class JsonPatchExerciseSolution {
     public static void main (String args[]) {
 
         JsonObject json = JsonBuildersExerciseSolution.getFinalObject();
-        System.out.println("Initial JSON: " + json);
+        System.out.println("INITIAL JSON: " + json);
 
-        JsonPatch jsonPatch = new JsonPatchBuilder()
+        JsonPatch jsonPatch = Json.createPatchBuilder()
                 .add("/price", Json.createValue(0.55))
                 .replace("/price", Json.createValue(1.55))
                 .replace("/batter/1/type", Json.createValue("Vanilla"))
@@ -30,6 +30,6 @@ public class JsonPatchExerciseSolution {
 
         System.out.println("PATCH JSON : " + jsonPatch);
         JsonObject result = jsonPatch.apply(json);
-        System.out.println("Result JSON: " + result);
+        System.out.println("RESULT JSON: " + result);
     }
 }

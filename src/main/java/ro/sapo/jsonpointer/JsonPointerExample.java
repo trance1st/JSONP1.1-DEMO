@@ -19,13 +19,13 @@ public class JsonPointerExample {
         System.out.println(book);
 
         //Applying a pointer
-        JsonPointer p = new JsonPointer("/author/name");
+        JsonPointer p = Json.createPointer("/author/name");
         JsonValue name = p.getValue(book);
 
         System.out.println(name);
 
         //Adding a new field. See the docs: add vs replace !!!
-        JsonPointer appenderPointer = new JsonPointer("/anotherTitle");
+        JsonPointer appenderPointer = Json.createPointer("/anotherTitle");
         System.out.println(appenderPointer.add(book, Json.createValue("I am a new field")));
 
         //Replacing based on a pointer
@@ -41,11 +41,11 @@ public class JsonPointerExample {
         JsonObject bookExtendedWithArray = Json.createObjectBuilder(book)
                 .add("similarBooks", jsonArrayOfObjects).build();
 
-        JsonPointer arrayPointer = new JsonPointer("/similarBooks/0/title");
+        JsonPointer arrayPointer = Json.createPointer("/similarBooks/0/title");
         System.out.println(arrayPointer.replace(bookExtendedWithArray, Json.createValue("new title")));
 
 
-        JsonPointer arrayPointerAdd = new JsonPointer("/similarBooks/0");
+        JsonPointer arrayPointerAdd = Json.createPointer("/similarBooks/0");
         System.out.println(arrayPointerAdd.add(bookExtendedWithArray, Json.createObjectBuilder().add("asd", "new").build()));
 
     }

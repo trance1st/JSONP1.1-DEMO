@@ -16,30 +16,30 @@ public class JsonPointerExerciseSolution {
         JsonObject json = JsonBuildersExerciseSolution.getFinalObject();
 
         //read name
-        JsonPointer readNamePointer = new JsonPointer("/name");
-        System.out.println("Read nama attribute: "  + readNamePointer.getValue(json));
+        JsonPointer readNamePointer = Json.createPointer("/name");
+        System.out.println("Read name attribute: "  + readNamePointer.getValue(json));
 
         //read type of second batter
-        JsonPointer readSecondBatterTypePointer = new JsonPointer("/batter/1/type");
+        JsonPointer readSecondBatterTypePointer = Json.createPointer("/batter/1/type");
         System.out.println("Read type of second batter: "  + readSecondBatterTypePointer.getValue(json));
 
         //add price attribute
-        JsonPointer addPricePointer = new JsonPointer("/price");
+        JsonPointer addPricePointer = Json.createPointer("/price");
         json = addPricePointer.add(json, Json.createValue(0.55));
         System.out.println("Added price attribute: " + json);
 
         //change value of price attribute
-        JsonPointer changePricePointer = new JsonPointer("/price");
+        JsonPointer changePricePointer = Json.createPointer("/price");
         json = changePricePointer.replace(json, Json.createValue(1.55));
         System.out.println("Changed price attribute: " + json);
 
         //change Chocolate to Vanilla
-        JsonPointer changeChocolatePointer = new JsonPointer("/batter/1/type");
+        JsonPointer changeChocolatePointer = Json.createPointer("/batter/1/type");
         json = changeChocolatePointer.replace(json, Json.createValue("Vanilla"));
         System.out.println("Changed batter Chocolate to Vanilla: " + json);
 
         //add new topping
-        JsonPointer addToppingPointer = new JsonPointer("/topping/-");
+        JsonPointer addToppingPointer = Json.createPointer("/topping/-");
         json = addToppingPointer.add(json, Json.createObjectBuilder()
                                                     .add("id", "5004")
                                                     .add("type", "Vanilla").build()

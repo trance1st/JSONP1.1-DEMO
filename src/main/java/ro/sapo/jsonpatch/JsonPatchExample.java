@@ -14,7 +14,7 @@ public class JsonPatchExample {
                 .add("lastName", "Bogdan")
                 .build();
 
-        JsonPatchBuilder patchBuilder = new JsonPatchBuilder();
+        JsonPatchBuilder patchBuilder = Json.createPatchBuilder();
 
         JsonPatch jsonPatch = patchBuilder.add("/city", "Bucharest")
                 .replace("/lastName", "Petre").build();

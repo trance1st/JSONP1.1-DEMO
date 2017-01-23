@@ -16,10 +16,10 @@ public class BigJsonProcessing {
 
     public static void main (String args[]) throws FileNotFoundException {
         //try to read to all document in memory
-        readJSON();
+        //readJSON();
 
         //parse the document using the streaming API
-        //parseWithStreams();
+        parseWithStreams();
 
         //parse, apply some operations on the document and save the result.
         //both operations using the streaming API
