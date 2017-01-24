@@ -279,3 +279,7 @@ https://www.voxxed.com/blog/2015/12/10441/
 
 http://blog.rahmannet.net/2017/01/json-p-11-public-review-starts-now.html
 
+http://williamdurand.fr/2014/02/14/please-do-not-patch-like-an-idiot/
+
+http://restful-api-design.readthedocs.io/en/latest/methods.html
+
