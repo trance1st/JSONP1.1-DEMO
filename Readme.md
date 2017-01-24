@@ -32,7 +32,8 @@ Please read the specificaion here -> https://tools.ietf.org/html/rfc6902
 
 ##### Exploring the API
 
-The main classes in JSON-P 1.1 are:  **Json**, **JsonArray**, **JsonObject**, **JsonPointer**, **JsonPatch**
+The main classes in JSON-P 1.1 are:  **Json**, **JsonArray**, **JsonObject**, **JsonPointer**, **JsonPatch**.
+
 The 'starting point' is this API is the class **Json** because it provides methods to create builders, factories and other JSON processing objects.  
 
 #### LAB 
