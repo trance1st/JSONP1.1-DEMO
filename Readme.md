@@ -227,7 +227,7 @@ jsonArrayOfObjects.getValuesAs(JsonObject.class).stream()
 
 >  Solve the exercise described in JsonStreamsExercise.txt (use the class JsonStreamsExerciseSolution for solution)
 
->  There is an extra exercise in the sub-pacakge 'extra'. See file JsonStreamsMapExercise.txt
+>  There is an extra exercise in the sub-package 'extra'. See file JsonStreamsMapExercise.txt
 
 ##### 6 - Process big JSON files
 
