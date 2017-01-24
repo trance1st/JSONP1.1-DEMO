@@ -9,7 +9,9 @@ At the time of writing this demo, the JSON-Processing API RI has not been releas
 #  What's new in JSON-P 1.1
 
  * Better builder classes - now you can create an JsonObject/JsonArray builder from and existing JsonObject/JsonArray object, so you don't need to copy all the properties by yourself.
+ 
  * JSON Pointer implementation. In you are not familliar what Json Pointer is, please read the IETF specification here -> https://tools.ietf.org/html/rfc6901
+ 
  * JSON Patch implementation(https://tools.ietf.org/html/rfc6902)
 
    JSON Patch provides some operations that can be applied to an JSON object in order to modify it. It uses the JSON Pointer to specify o location from the target object which will be modified.
