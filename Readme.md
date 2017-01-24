@@ -5,33 +5,24 @@ At the time of writing this demo, the JSON-Processing API RI has not been releas
 - checkout this repo: https://github.com/json-p/api-ri
 - simply run mvn clean install
 
-##### Use the RI JSON-P 1.1
-Create a project and add the following dependencies
-```
-<dependencies>
-    <dependency>
-        <groupId>javax.json</groupId>
-        <artifactId>javax.json-api</artifactId>
-        <version>1.1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-        <groupId>org.glassfish</groupId>
-        <artifactId>javax.json</artifactId>
-        <version>1.1.0-SNAPSHOT</version>
-    </dependency>
-</dependencies>
-```
+
 #  What's new in JSON-P 1.1
 
  * Better builder classes - now you can create an JsonObject/JsonArray builder from and existing JsonObject/JsonArray object, so you don't need to copy all the properties by yourself.
  * JSON Pointer implementation. In you are not familliar what Json Pointer is, please read the IETF specification here -> https://tools.ietf.org/html/rfc6901
  * JSON Patch implementation(https://tools.ietf.org/html/rfc6902)
 
-    JSON Patch provides some operations that can be applied to an JSON object in order to modify it. It uses the JSON Pointer to specify o location from the target object which will be modified.
+   JSON Patch provides some operations that can be applied to an JSON object in order to modify it. It uses the JSON Pointer to specify o location from the target object which will be modified.
 Please read the specificaion here -> https://tools.ietf.org/html/rfc6902
 
     There are various implementations of both JSON Pointer or JSON Path in different languages -> here you can find a list http://jsonpatch.com/
-
+ * JSON Merge Patch implementation(https://tools.ietf.org/html/rfc7386)
+  
+   A JSON merge patch document describes changes to be made to a target
+   JSON document using a syntax that closely mimics the document being
+   modified. 
+ 
+ 
  * Process JSON objects/arrays using the JAVA 8 streams operations.
  * Processing of Big JSON Data
 
