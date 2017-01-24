@@ -32,22 +32,8 @@ Please read the specificaion here -> https://tools.ietf.org/html/rfc6902
 
 ##### Exploring the API
 
-There are 3 main classes in JSON-P 1.1 :  **Json**, **JsonArray**, **JsonObject**, **JsonPointer**
-
-
-
-4. JsonPointer
-
-```
-/**
- * <p>This class is an immutable representation of a JSON Pointer as specified in
- * <a href="http://tools.ietf.org/html/rfc6901">RFC 6901</a>.
- * </p>
- * <p> A JSON Pointer, when applied to a target {@link JsonValue},
- * defines a reference location in the target.</p>
-  public final class JsonPointer {
-  }
-```
+The main classes in JSON-P 1.1 are:  **Json**, **JsonArray**, **JsonObject**, **JsonPointer**, **JsonPatch**
+The 'starting point' is this API is the class **Json** because it provides methods to create builders, factories and other JSON processing objects.  
 
 #### LAB 
 
