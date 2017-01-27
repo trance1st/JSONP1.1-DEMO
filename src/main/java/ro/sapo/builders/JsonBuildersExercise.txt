@@ -20,6 +20,7 @@
 
 
 2. Implement the extendJSON method in JsonBuildersExercise class and append an array to the above JSON
+(add a new array 'topping')
 
 {
     "id":"0001",

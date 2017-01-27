@@ -1,9 +1,6 @@
 package ro.sapo.builders;
 
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonObject;
-import javax.json.JsonValue;
+import javax.json.*;
 
 /**
  * Created by sapo on 01-Jul-16.

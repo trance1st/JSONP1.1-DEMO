@@ -28,8 +28,8 @@ public class JsonBuildersExerciseSolution {
                 .add("type", "donut")
                 .add("name", "Cake")
                 .add("batter", Json.createArrayBuilder()
-                                    .add(Json.createObjectBuilder().add("id", "1001").add("type", "Regular"))
-                                    .add(Json.createObjectBuilder().add("id", "1002").add("type", "Chocolate")).build()
+                        .add(Json.createObjectBuilder().add("id", "1001").add("type", "Regular"))
+                        .add(Json.createObjectBuilder().add("id", "1002").add("type", "Chocolate")).build()
                 ).build();
     }
 

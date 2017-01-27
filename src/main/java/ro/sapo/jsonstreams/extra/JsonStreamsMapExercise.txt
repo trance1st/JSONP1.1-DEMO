@@ -1,0 +1,7 @@
+See JSON books.json located in /src/main/resources
+
+Process this JSON and
+    - filter the list of books to show only books where author is 'Posa'
+    - for each of the filtered rows add a new field named 'summary' as a concatenation of 'author' and 'year' fields
+
+

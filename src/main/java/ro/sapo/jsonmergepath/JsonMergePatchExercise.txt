@@ -1,0 +1,3 @@
+Implement the operations 3-5 from the 'JSON Pointer' exercise using JSON Merge Patch
+
+Use the class JsonMergePatch (see the example class)

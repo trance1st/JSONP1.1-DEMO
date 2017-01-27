@@ -24,7 +24,7 @@ public class JsonPointerExample {
 
         System.out.println(name);
 
-        //Adding a new field. See the docs: add vs replace !!!
+        //Adding a new field
         JsonPointer appenderPointer = Json.createPointer("/anotherTitle");
         System.out.println(appenderPointer.add(book, Json.createValue("I am a new field")));
 
