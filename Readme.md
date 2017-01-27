@@ -195,17 +195,11 @@ you will obtain
 "firstName":"Ion"
 }
 ```
-**Impact on building REST API's
 
-```
-PATCH /target HTTP/1.1
-Host: example.org
-Content-Type: application/merge-patch+json
-```
 
 >  See the class JsonMergePatchExample for more examples
 
->  Solve the exercise described in JsonMergePatch.txt (use the class JsonMergePatchExercise to solve)
+>  Solve the exercise described in JsonMergePatchExercise.txt (use the class JsonMergePatchExercise to solve)
 
 ##### 5 - Process JSON objects (actually JSON arrays) like JAVA 8 streams
  You can process JSON arrays in the same way you process JAVA 8 streams:
