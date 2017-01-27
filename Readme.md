@@ -8,17 +8,17 @@ At the time of writing this demo, the JSON-Processing API RI has not been releas
 
 #  What's new in JSON-P 1.1
 
- * Better builder classes - now you can create an JsonObject/JsonArray builder from and existing JsonObject/JsonArray object, so you don't need to copy all the properties by yourself.
+ * Better builder classes - now you can create a JsonObject/JsonArray builder from an existing JsonObject/JsonArray object, so you don't need to copy all the properties by yourself.
  
- * JSON Pointer implementation. In you are not familliar what Json Pointer is, please read the IETF specification here -> https://tools.ietf.org/html/rfc6901
+ * JSON Pointer implementation. If you are not familiar with what Json Pointer is, please read the IETF specification here -> https://tools.ietf.org/html/rfc6901
  
- * JSON Patch implementation(https://tools.ietf.org/html/rfc6902)
+ * JSON Patch implementation (https://tools.ietf.org/html/rfc6902)
 
-   JSON Patch provides some operations that can be applied to an JSON object in order to modify it. It uses the JSON Pointer to specify o location from the target object which will be modified.
-Please read the specificaion here -> https://tools.ietf.org/html/rfc6902
+   JSON Patch provides some operations that can be applied to a JSON object in order to modify it. It uses the JSON Pointer to specify a location from the target object which will be modified.
+Please read the specification here -> https://tools.ietf.org/html/rfc6902
 
     There are various implementations of both JSON Pointer or JSON Path in different languages -> here you can find a list http://jsonpatch.com/
- * JSON Merge Patch implementation(https://tools.ietf.org/html/rfc7386)
+ * JSON Merge Patch implementation (https://tools.ietf.org/html/rfc7386)
   
    A JSON merge patch document describes changes to be made to a target
    JSON document using a syntax that closely mimics the document being
@@ -28,19 +28,19 @@ Please read the specificaion here -> https://tools.ietf.org/html/rfc6902
  * Process JSON objects/arrays using the JAVA 8 streams operations.
  * Processing of Big JSON Data
 
-    If you read a very big json object you will have some memory issues. To addres this problem the JSON-P 1.1 introduces the class JsonParser. This class uses the streaming model to read an JSON object and works at token level.
+    If you read a very big JSON object you will have some memory issues. To address this problem the JSON-P 1.1 introduces the class JsonParser. This class uses the streaming model to read a JSON object and works at token level.
 
 ##### Exploring the API
 
 The main classes in JSON-P 1.1 are:  **Json**, **JsonArray**, **JsonObject**, **JsonPointer**, **JsonPatch**.
 
-The 'starting point' is this API is the class **Json** because it provides methods to create builders, factories and other JSON processing objects.  
+The 'starting point' in this API is the class **Json** because it provides methods to create builders, factories and other JSON processing objects.  
 
 #### LAB 
 
 In the source code you will find a separate package for each of the below exercises. 
 
-Each pacakge contains 
+Each package contains 
 * an example class who's name is ending with "Example"
 * a txt file describing what needs to be solved
 * a class (ending with 'Exercise') where you need to solve the exercise.
@@ -52,7 +52,7 @@ This lab contains 6 parts
 
 Use JSON-P to create some JSON objects.
 
-Use the followings methods:
+Use the following methods:
 * Json.createObjectBuilder
 * Json.createObjectBuilder(JsonObject object)
 * Json.createArrayBuilder()
@@ -66,7 +66,7 @@ System.out.println(book);
 ```
 >  See the class JsonBuildersExample for more examples.
 
->  Solve the exercise described in JsonBuildersExercise.txt (use the class JsonBuildersExercise for solution)
+>  Solve the exercise described in JsonBuildersExercise.txt (use the class JsonBuildersExercise to solve)
 
 ##### 2 - JSON POINTER
 
@@ -74,7 +74,7 @@ https://tools.ietf.org/html/rfc6901
 
 JSON Pointer defines a string syntax for identifying a specific value within a JSON document.
 
-Exampple:
+Example:
 ```
 {
     "foo" : ["bar", "baz"],
@@ -91,19 +91,19 @@ The following JSON Pointers resolve this JSON as:
 Retrieving a value based on a JSON Pointer
 ```
 JsonObject person = Json.createObjectBuilder()
-                .add("name", "Posa bogdan")
+                .add("name", "Posa Bogdan")
                 .build();
 //Applying a pointer
 JsonPointer p = Json.createPointer("/name");
 JsonValue name = p.getValue(person);
 
-// It will print "Posa bogdan"
+// It will print "Posa Bogdan"
 System.out.println(name);
 ```
 
 >  See the class JsonPointerExample for more examples.
 
->  Solve the exercise described in JsonPointerExercise.txt (use the class JsonPointerExercise for solution)
+>  Solve the exercise described in JsonPointerExercise.txt (use the class JsonPointerExercise to solve)
 
 ##### 3 - JSON PATCH
 
@@ -160,17 +160,9 @@ JsonStructure newBeer = patchBuilder.replace("/brewery/key", “GBrewery")
                                     .apply(beer)
 ```
 
-**Impact on building REST API's
-
-```
-PATCH /my/data HTTP/1.1
-Host: example.org
-Content-Length: 326
-Content-Type: application/json-patch+json
-```
 >  See the class JsonPatchExample for more examples
 
->  Solve the exercise described in JsonPatchExercise.txt (use the class JsonPatchExercise for solution)
+>  Solve the exercise described in JsonPatchExercise.txt (use the class JsonPatchExercise to solve)
 
 
 ##### 4 - JSON MERGE PATCH
@@ -213,7 +205,7 @@ Content-Type: application/merge-patch+json
 
 >  See the class JsonMergePatchExample for more examples
 
->  Solve the exercise described in JsonMergePatch.txt (use the class JsonMergePatchExercise for solution)
+>  Solve the exercise described in JsonMergePatch.txt (use the class JsonMergePatchExercise to solve)
 
 ##### 5 - Process JSON objects (actually JSON arrays) like JAVA 8 streams
  You can process JSON arrays in the same way you process JAVA 8 streams:
@@ -225,13 +217,13 @@ jsonArrayOfObjects.getValuesAs(JsonObject.class).stream()
 
 >  See the class JsonStreamsExample for more examples.
 
->  Solve the exercise described in JsonStreamsExercise.txt (use the class JsonStreamsExerciseSolution for solution)
+>  Solve the exercise described in JsonStreamsExercise.txt (use the class JsonStreamsExercise to solve)
 
 >  There is an extra exercise in the sub-package 'extra'. See file JsonStreamsMapExercise.txt
 
 ##### 6 - Process big JSON files
 
-In all the above examples, when you load and JsonObject or JsonArray, the whole document is loaded into memory. 
+In all the above examples, when you load a JsonObject or JsonArray, the whole document is loaded into memory. 
 
 To solve the memory problem, the JsonParser class uses the streaming model to parse a JSON.
 
@@ -239,7 +231,7 @@ To solve the memory problem, the JsonParser class uses the streaming model to pa
 
 >  Donwload the file https://drive.google.com/open?id=0B2JsVi_687XKbE91cWE2SDVwMm8 to the root of this project. Name the file 'companies.json'
 
-In our example first we will try to read a big json file ( ~ 80MB).
+In our example, first we will try to read a big json file ( ~ 80MB).
 
 As expected, we are getting an exception
 ```
