@@ -1,3 +1,9 @@
+# Info
+
+This is the lab used for a BJUG meetup: https://bjug.ro/hands-on-lab-java-api-for-json-processing/ 
+
+Presentation slides: https://slides.com/bogdanposa/json-processing
+
 # Setup
 
 ##### Build the reference implementation on JSON-P 1.1
