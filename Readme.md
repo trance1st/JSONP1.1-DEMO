@@ -3,7 +3,7 @@
 ##### Build the reference implementation on JSON-P 1.1
 At the time of writing this demo, the JSON-Processing API RI has not been released in the maven central repo. So you have to build the RI by yourself.
 - checkout this repo: https://github.com/json-p/api-ri
-- git checkout 11eec49cb88c25ae3fe2c5f30e4960a73cb8d52c
+- get a working revision: git checkout 11eec49cb88c25ae3fe2c5f30e4960a73cb8d52c
 - simply run mvn clean install
 
 
